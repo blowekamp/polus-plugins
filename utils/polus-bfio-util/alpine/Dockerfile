@@ -19,7 +19,6 @@ RUN apk --update add --virtual build-dependencies python3-dev build-base wget \
     && pip3 install --upgrade cython \
     && pip3 install -r  ${EXEC_DIR}/requirements.txt --no-cache-dir \
     && pip3 install ${EXEC_DIR}/ --no-cache-dir \
-    && mv ${EXEC_DIR}/bfio/jars/loci_tools.jar /usr/lib/python3.6/site-packages/bioformats/jars/loci_tools.jar -f \
     && rm -rf ${EXEC_DIR} \
     && apk del build-dependencies
 		

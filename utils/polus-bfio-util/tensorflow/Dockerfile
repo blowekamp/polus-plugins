@@ -20,7 +20,6 @@ RUN apt-get update && \
     pip3 install --upgrade cython && \
     pip3 install -r  ${EXEC_DIR}/requirements.txt --no-cache-dir && \
     pip3 install ${EXEC_DIR}/ --no-cache-dir && \
-    mv ${EXEC_DIR}/bfio/jars/loci_tools.jar /usr/local/lib/python3.6/dist-packages/bioformats/jars/loci_tools.jar -f && \
     rm -rf ${EXEC_DIR}
 
 ARG DATA_DIR="/data"
